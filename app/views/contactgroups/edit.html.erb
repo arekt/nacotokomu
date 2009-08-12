@@ -1,0 +1,22 @@
+<h1>Editing <%= @contactgroup.contactgroup_name %></h1>
+
+<% form_for(@contactgroup) do |f| %>
+<p>
+    <b>contactgroup_name</b><br />
+    <%= f.text_field :contactgroup_name %>
+</p>
+<p>
+    <b>alias</b><br />
+    <%= f.text_field :alias %>
+</p>
+
+<p>
+    <b>contacts </b><br />
+    <%= collection_select_multiple_contacts :contactgroup, :contacts %>
+</p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+

@@ -1,0 +1,24 @@
+<h1>Listing timeperiods</h1>
+
+<table>
+  <tr>
+    <th>Timeperiods name</th>
+    <th>Alias</th>
+    <th>Details</th>
+  </tr>
+
+<% @timeperiods.each do |timeperiod| %>
+  <tr>
+    <td><%=h timeperiod.timeperiod_name %></td>
+    <td><%=h timeperiod.alias %></td>
+    <td><%=h timeperiod.details %></td>
+    <td><%= link_to 'Show', timeperiod %></td>
+    <td><%= link_to 'Edit', edit_timeperiod_path(timeperiod) %></td>
+    <td><%= link_to 'Destroy', timeperiod, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New timeperiod', new_timeperiod_path %>

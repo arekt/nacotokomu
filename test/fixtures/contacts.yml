@@ -1,0 +1,37 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+arek:
+  contact_name: arek_turlewicz
+  alias: Arek Turlewicz
+  contactgroups: users, admins
+  details: Arek Turlewicz was born in Poland in 1980.
+  host_notification_period: always
+  service_notification_period: always
+  host_notification_command: notify_host_by_sms
+  service_notification_command: notify_host_by_sms
+  email: arekt@localhost.localdomain
+  phone: 555-555-553
+  
+janek:
+  contact_name: jan_kowalski
+  alias: Jan Kowalski
+  contactgroups: users
+  details: "Jan Kowalski is very common Polish name, so it's offten used in various examples."
+  host_notification_period: always
+  service_notification_period: always
+  host_notification_command: notify_host_by_sms
+  service_notification_command: notify_host_by_sms
+  email: janek@localhost.localdomain
+  phone: 555-555-554 
+
+lei:
+  contact_name: lei
+  alias: Lei
+  contactgroups: admins
+  details: "[TODO] Add some info"
+  host_notification_period: always
+  service_notification_period: always
+  host_notification_command: notify_host_by_email
+  service_notification_command: notify_host_by_email
+  email: lei@localhost.localdomain
+  phone: 555-555-555

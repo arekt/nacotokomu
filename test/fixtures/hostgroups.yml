@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+computers:
+  hostgroup_name: computers
+  alias: Computers
+
+network_devices:
+  hostgroup_name: network_devices
+  alias: Network devices

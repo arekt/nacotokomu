@@ -1,0 +1,55 @@
+<h1>Editing <%= @host.host_name %></h1>
+
+<% form_for(@host) do |f| %>
+<p>
+    <b>host_name</b><br />
+    <%= f.text_field :host_name %>
+</p>
+<p>
+    <b>alias</b><br />
+    <%= f.text_field :alias %>
+</p>
+<p>
+    <b>address</b><br />
+    <%= f.text_field :address %>
+</p>
+
+<p>
+    <b>command</b><br />
+    <%= collection_select(:host, :command_id, Command.all, :id, :command_name, {:prompt => true}) %>
+</p>
+
+<p>
+    <b>timeperiod</b><br />
+    <%= collection_select(:host, :timeperiod_id, Timeperiod.all, :id, :alias, {:prompt => true}) %>
+</p>
+
+<p>
+    <b>configuration</b><br />
+    <%= collection_select(:host, :configuration_id, Configuration.all, :id, :name, {:prompt => true}) %>
+
+</p>
+
+
+<p>
+    <b>contact group</b><br />
+    <%= collection_select_multiple :host, :contactgroups, @contactgroups, :id, :alias %>
+</p>
+
+<p>
+    <b>host group</b><br />
+    <%= collection_select_multiple :host, :hostgroups, @hostgroups, :id, :alias %>
+</p>
+
+
+
+<p>
+    <b>details</b><br />
+    <%= f.text_area :details, :size => "60x12" %>
+</p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+

@@ -1,0 +1,63 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+generic_host:
+  name: generic_host
+  conf_type: 1
+  description: This is kind of template for complicated host parameters.
+  details: "\
+initial_state   o
+check_interval  5.000000
+retry_interval  1.000000
+max_check_attempts  10
+active_checks_enabled   1
+passive_checks_enabled  1
+obsess_over_host    1
+event_handler_enabled   1
+low_flap_threshold  0.000000
+high_flap_threshold 0.000000
+flap_detection_enabled  1
+flap_detection_options  o,d,u
+freshness_threshold 0
+check_freshness 0
+notification_options    d,u,r
+notifications_enabled   1
+notification_interval   0.000000
+first_notification_delay    0.000000
+stalking_options    n
+process_perf_data   1
+failure_prediction_enabled  1
+retain_status_information   1
+retain_nonstatus_information    1
+"
+  
+generic_service:
+  name: generic_service
+  conf_type: 2
+  description: This is kind of template for complicated service parameters.
+  details: "\
+initial_state   o
+check_interval  5.000000
+retry_interval  1.000000
+max_check_attempts  4
+is_volatile 0
+parallelize_check   1
+active_checks_enabled   1
+passive_checks_enabled  1
+obsess_over_service 1
+event_handler_enabled   1
+low_flap_threshold  0.000000
+high_flap_threshold 0.000000
+flap_detection_enabled  1
+flap_detection_options  o,w,u,c
+freshness_threshold 0
+check_freshness 0
+notification_options    u,w,c,r
+notifications_enabled   1
+notification_interval   0.000000
+first_notification_delay    0.000000
+stalking_options    n
+process_perf_data   1
+failure_prediction_enabled  1
+retain_status_information   1
+retain_nonstatus_information    1
+"

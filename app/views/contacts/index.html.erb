@@ -1,0 +1,22 @@
+<h1>Defined Contacts</h1>
+
+<table>
+  <tr>
+    <th>contact_name</th>
+    <th>alias</th>
+  </tr>
+
+<% @contacts.each do |contact| %>
+  <tr>
+    <td><%=h contact.contact_name %></td>
+    <td><%=h contact.alias %></td>
+    <td><%= link_to 'Show', contact %></td>
+    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+    <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+<tr><td> <%= link_to 'Create new contact', :action => :new %></td></tr>
+</table>
+
+
+

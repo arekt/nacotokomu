@@ -1,0 +1,18 @@
+<p>
+  <b>Service description:</b>
+  <%=h @service.service_description %>
+</p>
+
+<p>
+  <b>Check command:</b>
+  <%=h @service.command.command_name %>
+</p>
+
+<p>
+  <b>Configuration:</b>
+  <%=h @service.configuration.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

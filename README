@@ -1,0 +1,14 @@
+NACOTOKOMU nagios configuration tool
+
+LICENCE GPLv3
+AUTHOR Arek Turlewicz
+
+Nagios configuration tool
+
+Keep information about objects from your network in ActiveRecord and if you need generate nagios config.
+
+Why another tool?
+-In Rails you can easly add new columns to objects, keep more information then standard nagios configuration, so in the future this project could be something like infrastructure control center, with possibility to generate config files for nagios, exim, samba itp.
+
+-It's my first bigger Rails project, so it's like sandbox.
+

@@ -1,0 +1,23 @@
+<h1>Defined Commands</h1>
+
+<table>
+  <tr>
+    <th>command_name</th>
+    <th>command_line</th>
+  </tr>
+
+
+
+
+<% for command in @commands %>
+    <tr>
+    <td><%= command.command_name %></td>
+    <td><%= command.command_line %></td>
+    <td><%= link_to 'Show', command %></td>
+    <td><%= link_to 'Edit', edit_command_path(command) %></td>
+    <td><%= link_to 'Destroy', command, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+<% end %>
+
+    <tr><td> <%= link_to 'Create new command', :action => :new %></td></tr>
+</table>

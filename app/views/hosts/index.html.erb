@@ -1,0 +1,25 @@
+<h1>Defined Hosts</h1>
+
+<table>    
+<tr>
+<th>host_name</th>
+<th>alias</th>
+<th>host_address</th>
+</tr>
+
+    <% @hosts.each do |host| %>
+    <tr>
+    <td><%=h host.host_name %></td>
+    <td><%=h host.alias %></td>
+    <td><%=h host.address %></td>
+    <td><%= link_to 'Show', host %></td>
+    <td><%= link_to 'Edit', edit_host_path(host) %></td>
+    <td><%= link_to 'Destroy', host, :confirm => 'Are you sure?', :method => :delete %></td>
+    <tr> 
+    <% end %>
+
+
+<tr><td> <%= link_to 'Create new host', :action => :new %></td></tr>
+</table>
+
+

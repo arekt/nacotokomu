@@ -1,0 +1,12 @@
+<h1><%= @host.host_name %></h1>
+address: <%= @host.address %><br/>
+
+contactgroups: 
+<ul>
+<% @host.contactgroups.collect do |cg| %>
+<li> <%= cg.alias %>
+<% end %>
+</ul>
+<br>
+details:<br>
+<%= @host.details %>

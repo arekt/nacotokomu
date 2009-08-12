@@ -1,0 +1,54 @@
+<h1>New contact</h1>
+
+<% form_for(:contact, @contact, :url => { :action => "create" }) do |f| %>
+<p>
+    <b>contact_name</b><br />
+    <%= f.text_field :contact_name %>
+</p>
+<p>
+    <b>alias</b><br />
+    <%= f.text_field :alias %>
+</p>
+
+<p>
+    <b>contact group</b><br />
+    <%= collection_select_multiple :contact, :contactgroups, @contactgroups, :id, :alias %>
+</p>
+
+<p>
+    <b>host_notification_period</b><br />
+    <%= collection_select :contact, :host_notification_period, @timeperiods.collect, :id, :alias %>
+</p>
+<p>
+    <b>service_notification_period</b><br />
+    <%= collection_select :contact, :service_notification_period, @timeperiods.collect, :id, :alias %>
+</p>
+<p>
+    <b>host_notification_command</b><br />
+    <%= collection_select :contact, :host_notification_command, @commands.collect, :id, :command_name %>
+</p>
+<p>
+    <b>service_notification_command</b><br />
+    <%= collection_select :contact, :service_notification_command, @commands.collect, :id, :command_name %>
+</p>
+
+<p>
+    <b>email</b><br />
+    <%= f.text_field :email %>
+</p>
+
+<p>
+    <b>phone</b><br />
+    <%= f.text_field :phone %>
+</p>
+
+<p>
+    <b>details</b><br />
+    <%= f.text_area :details, :size => "60x12" %>
+</p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+

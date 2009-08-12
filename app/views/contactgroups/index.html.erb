@@ -1,0 +1,20 @@
+<h1>Defined Contactgroups</h1>
+
+
+<table>
+  <tr>
+    <th> name </th>
+    <th> alias </th>
+  </tr>
+    <% @contactgroups.each do |contactgroup| %>
+     <tr>
+     <td><%= contactgroup.contactgroup_name %></td> 
+     <td><%= contactgroup.alias %></td>
+     <td><%= link_to 'Show', contactgroup %></td>
+     <td><%= link_to 'Edit', edit_contactgroup_path(contactgroup) %></td>
+     <td><%= link_to 'Destroy', contactgroup, :confirm => 'Are you sure?', :method => :delete %></td>
+     </tr>
+    <% end %>
+
+    <tr><td> <%= link_to 'Create new contactgroup', :action => :new %></td></tr>
+</table>

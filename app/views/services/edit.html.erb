@@ -1,0 +1,43 @@
+<h1>Editing service</h1>
+
+<% form_for(@service) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :service_description %><br />
+    <%= f.text_field :service_description %>
+  </p>
+<p>
+    <b>check_command</b><br />
+    <%= collection_select(:service, :command_id, Command.all, :id, :command_name, {:prompt => true}) %>
+</p>
+
+<p>
+    <b>timeperiod</b><br />
+    <%= collection_select(:service, :timeperiod_id, Timeperiod.all, :id, :alias, {:prompt => true}) %>
+</p>
+
+<p>
+    <b>configuration</b><br />
+    <%= collection_select(:service, :configuration_id, Configuration.all, :id, :name, {:prompt => true}) %>
+</p>
+
+
+<p>
+    <b>contact group</b><br />
+    <%= collection_select_multiple :service, :contactgroups, @contactgroups, :id, :alias %>
+</p>
+
+<p>
+    <b>host group</b><br />
+    <%= collection_select_multiple :service, :hostgroups, @hostgroups, :id, :alias %>
+</p>
+
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @service %> |
+<%= link_to 'Back', services_path %>

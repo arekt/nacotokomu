@@ -1,0 +1,29 @@
+<h1>Editing configuration</h1>
+
+<% form_for(@configuration) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+</p> 
+<p>
+    <%= select(:configuration, :conf_type, [['host configuration', 1], ['service configuration', 2]]) %> 
+  </p>
+
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :size => "60x3" %>
+  </p>
+  <p>
+    <%= f.label :details %><br />
+    <%= f.text_area :details %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @configuration %> |
+<%= link_to 'Back', configurations_path %>

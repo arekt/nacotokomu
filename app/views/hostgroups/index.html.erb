@@ -1,0 +1,22 @@
+<h1>Listing hostgroups</h1>
+
+<table>
+  <tr>
+    <th>Hostgroup name</th>
+    <th>Alias</th>
+  </tr>
+
+<% @hostgroups.each do |hostgroup| %>
+  <tr>
+    <td><%=h hostgroup.hostgroup_name %></td>
+    <td><%=h hostgroup.alias %></td>
+    <td><%= link_to 'Show', hostgroup %></td>
+    <td><%= link_to 'Edit', edit_hostgroup_path(hostgroup) %></td>
+    <td><%= link_to 'Destroy', hostgroup, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hostgroup', new_hostgroup_path %>

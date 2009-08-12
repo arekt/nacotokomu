@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @configuration.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @configuration.conf_type %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @configuration.description %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%=h @configuration.details %>
+</p>
+
+
+<%= link_to 'Edit', edit_configuration_path(@configuration) %> |
+<%= link_to 'Back', configurations_path %>

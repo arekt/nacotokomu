@@ -1,0 +1,18 @@
+<p>
+  <b>Timeperiods name:</b>
+  <%=h @timeperiod.timeperiod_name %>
+</p>
+
+<p>
+  <b>Alias:</b>
+  <%=h @timeperiod.alias %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%=h @timeperiod.details %>
+</p>
+
+
+<%= link_to 'Edit', edit_timeperiod_path(@timeperiod) %> |
+<%= link_to 'Back', timeperiods_path %>

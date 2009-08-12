@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;.
+charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>Nagios configuration editor</title>
+<%= stylesheet_link_tag "style" %>
+</head>
+<body id="nC">
+<div id="container">
+<div id="header">
+<bold>== nC | Nagios Configurator | </bold>
+<%= link_to "Hosts", hosts_path %>
+<%= link_to "Commands", commands_path %>
+<%= link_to "Contactgroups", contactgroups_path %>
+<%= link_to "Contacts", contacts_path %> 
+<%= link_to "Timeperiods", timeperiods_path %>
+<%= link_to "Hostgroups", hostgroups_path %>
+<%= link_to "Services", services_path %>
+<%= link_to "Configurations", configurations_path %>
+<%= link_to "Tools", tools_path %> == <br>
+</div>
+<div id="content">
+<%= yield -%>
+</div>
+<div id="sidebar"></div>
+</div>
+</body>
+</html>
+

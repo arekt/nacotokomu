@@ -1,0 +1,10 @@
+<h1><%= @contactgroup.contactgroup_name %></h1>
+alias: <%= @contactgroup.alias %><br/>
+
+contacts: 
+<ul>
+<% @contactgroup.contacts.collect do |c| %>
+<li> <%= c.alias %>
+<% end %>
+</ul>
+<br>

@@ -1,0 +1,24 @@
+<h1>Listing configurations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+
+<% @configurations.each do |configuration| %>
+  <tr>
+    <td><%=h configuration.name %></td>
+    <td><%=h configuration.conf_type %></td>
+    <td><%=h configuration.description %></td>
+    <td><%= link_to 'Show', configuration %></td>
+    <td><%= link_to 'Edit', edit_configuration_path(configuration) %></td>
+    <td><%= link_to 'Destroy', configuration, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New configuration', new_configuration_path %>

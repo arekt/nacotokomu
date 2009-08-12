@@ -1,0 +1,13 @@
+<p>
+  <b>Hostgroup name:</b>
+  <%=h @hostgroup.hostgroup_name %>
+</p>
+
+<p>
+  <b>Alias:</b>
+  <%=h @hostgroup.alias %>
+</p>
+
+
+<%= link_to 'Edit', edit_hostgroup_path(@hostgroup) %> |
+<%= link_to 'Back', hostgroups_path %>

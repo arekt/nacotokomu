@@ -1,0 +1,17 @@
+<h1>Editing <%= @command.command_name %></h1>
+
+<% form_for(@command) do |f| %>
+<p>
+    <b>command_name</b><br />
+    <%= f.text_field :command_name %>
+</p>
+<p>
+    <b>command_line</b><br />
+    <%= f.text_field :command_line %>
+</p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+

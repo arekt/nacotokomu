@@ -1,0 +1,18 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+PING:
+  service_description: PING
+  command: check_ping
+  timeperiod: always
+  configuration: generic_service
+  contactgroups: users, admins
+  hostgroups: computers, network_devices 
+
+SSH:
+  service_description: SSH
+  command: check_ssh
+  timeperiod: always
+  configuration: generic_service
+  contactgroups: users, admins
+  hostgroups: computers
+  

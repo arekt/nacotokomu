@@ -1,0 +1,23 @@
+<h1>New timeperiod</h1>
+
+<% form_for(@timeperiod) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :timeperiod_name %><br />
+    <%= f.text_field :timeperiod_name %>
+  </p>
+  <p>
+    <%= f.label :alias %><br />
+    <%= f.text_field :alias %>
+  </p>
+  <p>
+    <%= f.label :details %><br />
+    <%= f.text_area :details %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', timeperiods_path %>

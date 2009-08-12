@@ -1,0 +1,30 @@
+<h1>Editing hostgroup</h1>
+
+<% form_for(@hostgroup) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :hostgroup_name %><br />
+    <%= f.text_field :hostgroup_name %>
+  </p>
+  <p>
+    <%= f.label :alias %><br />
+    <%= f.text_field :alias %>
+  </p>
+
+<p>
+    <b>hosts</b><br />
+    <%= collection_select_multiple :hostgroup, :hosts, @hosts, :id, :alias %>
+</p>
+
+
+
+
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @hostgroup %> |
+<%= link_to 'Back', hostgroups_path %>
